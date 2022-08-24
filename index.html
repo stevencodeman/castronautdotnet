@@ -18,12 +18,12 @@
       <h2 class="logo"></h2>
       <div class="toggle"></div>
     </header>
-    <video src="explore.mp4" ummuted loop autoplay></video>
+    <video src="explore.mp4" muted loop autoplay></video>
     <div class="overlay"></div>
     <div class="text">
       <h2>CASTRONAUT </h2> 
       
-      <p>Music comes from the universe not the individual.</p>
+      <p>Music comes from the universe not the individual</p>
       <a href="https://app.promotix.com/events/details/Castronaut-at-Time-Manila-tickets">TOUR</a>
     </div>
    
@@ -41,6 +41,14 @@
       <li><a href="https://app.promotix.com/events/details/Castronaut-at-Time-Manila-tickets">Tour</a></li>
     
     </ul>
-  </div>
+  <
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+    menuToggle.addEventListener('click',() => {
+      menuToggle.classList.toggle('active')
+      showcase.classList.toggle('active')
+    })
+  </script>
 </body>
 </html>
