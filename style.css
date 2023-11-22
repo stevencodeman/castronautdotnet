@@ -6,70 +6,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-header
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo
-{
-  color: rgb(0, 0, 0);
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-
-.showcase
-{
-  position: ;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(0, 0, 0);
-  transition: 0.5s;
-  z-index: 2;
-}
-.showcase.active
-{
-  right: 300px;
-}
-
-.showcase video
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-}
-.overlay
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #041e56;
-  mix-blend-mode: overlay;
-}
-.text
-{
-  position: relative;
-  z-index: 10;
-}
 
 .text h2
 {
@@ -185,3 +121,121 @@ header .logo
   }
 }
 
+body {
+  font-family: 'El Messiri', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #333;
+  width: 50%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .socials {
+    margin-top: 10px;
+  }
+}
+</style>
+</head>
+<body>
+<section class="showcase active">
