@@ -203,24 +203,28 @@ p {
   align-items: center;
   justify-content: center;
 }
+.menu {
+  position: fixed; /* Change from 'absolute' to 'fixed' */
+  top: 0;
+  right: 0;
+  background: #333;
+  width: 50%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
 
 .menu.active {
   transform: translateX(0);
-}
 
-.menu ul {
-  list-style: none;
-  padding: 0;
-}
 
-.menu ul li {
-  margin-bottom: 20px;
-}
 
-.menu ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
+
 }
 
 /* Responsive styles for smaller screens */
@@ -235,7 +239,3 @@ p {
     margin-top: 10px;
   }
 }
-</style>
-</head>
-<body>
-<section class="showcase active">
